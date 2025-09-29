@@ -17,6 +17,7 @@ from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 app = Flask(__name__)
 # export FLASK_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY')
+
 ckeditor = CKEditor(app)
 Bootstrap5(app)
 
