@@ -17,9 +17,6 @@ from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 print(os.environ.get('DB_URI'))
 
 app = Flask(__name__)
-# export FLASK_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# export DB_URI=postgresql://posts_1ct9_user:JkFNnWhRVkHpWTe0WuRvSlwjBMgB8Kcu@dpg-d3dok4ogjchc73ann37g-a/posts_1ct9
-# export DB_URI=postgresql://posts_1ct9_user:JkFNnWhRVkHpWTe0WuRvSlwjBMgB8Kcu@dpg-d3dok4ogjchc73ann37g-a.frankfurt-postgres.render.com/posts_1ct9
 app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY')
 ckeditor = CKEditor(app)
 Bootstrap5(app)
